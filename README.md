@@ -69,11 +69,12 @@ Now you can open web broswer and hit url:
 http://localhost:8000/api/
 
 Available api endpoints:  
-| HTTP method              	| url       	        | available actions  	|
-|-------------------------	|-------------------	|-----------------------------------------	|
+  
+
+| HTTP method              	| url       	        | available actions  	                    |
+| -------------------------	| -------------------	| -----------------------------------------	|
 | GET, POST               	| api/mailbox       	| show all mailboxes, create new mailbox  	|
 | GET, PUT, PATCH, DELETE 	| api/mailbox/:id/  	| show, update or delete single mailbox   	|
 | GET, POST               	| api/template/     	| show all templates, create new template 	|
 | GET, PUT, PATCH, DELETE 	| api/template/:id/ 	| show, update or delete single template  	|
 | GET, POST               	| api/email/        	| show emails, send new one               	|
-
