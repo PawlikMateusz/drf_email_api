@@ -1,0 +1,38 @@
+### Python template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Translations
+*.mo
+*.pot
+
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# Environments
+.venv
+venv/
+ENV/
+
+
+
+
+### Project template
+
+email_api/attachments
+
+.pytest_cache/
+.env
+
