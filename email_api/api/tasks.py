@@ -13,7 +13,7 @@ from smtplib import SMTPException
 from email_api.celery import app
 from .models import Email, Mailbox, Template
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('api')
 
 
 def create_message(data, email):
@@ -53,6 +53,7 @@ def send_email(self, data, email_id):
             logger.debug("------mailbox id: '{0}'".format(data['mailbox']))
             logger.debug("------email id: '{0}'".format(email.id))
     else:
-        logger.debug("Email send successfully")
+        logger.debug(
+            "Email send successfully, email id: '{0}'".format(email.id))
         email.send_date = datetime.now(tz=timezone.utc)
         email.save()
