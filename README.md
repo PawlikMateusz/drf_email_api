@@ -47,7 +47,7 @@ CELERY_RESULT_BACKEND=
 ```
 </li>
 <li>Create virtual environment and install requirements from requirements.txt file</li>
-<li>Go to email_api/email_api and run Celery worker (with activated venv)
+<li>Go to email_api folder and run Celery worker (with activated venv)
 
 ```
 celery -A email_api worker -l info
