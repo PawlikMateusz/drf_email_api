@@ -27,7 +27,7 @@ To install and run this project you must have to install Redis message broker an
 <ol>
 <li>Install Redis and PostgresSQL</li>
 <li>Configure new database and db user, then fire up db and redis services</li>
-<li>Create .env file, put it into email_api/email_api folder(right next to setting.py file), fill it with your configuration:
+<li>Create .env file, put it into project root folder(right next to requirements.txt file), fill it with your configuration:
 
 ```
 # Django conf
