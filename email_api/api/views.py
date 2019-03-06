@@ -21,11 +21,11 @@ class TemplateViewSet(viewsets.ModelViewSet):
 
 class EmailFilter(filters.FilterSet):
     sent = filters.BooleanFilter(
-        field_name='send_date', lookup_expr='isnull', label='Show only sent')
+        field_name='send_date', lookup_expr='isnull', exclude=True)
 
     class Meta:
         model = Email
-        fields = ['send_date', 'date', 'sent']
+        fields = ['send_date', 'date']
 
 
 class EmailViewSet(mixins.CreateModelMixin,

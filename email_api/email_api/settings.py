@@ -2,12 +2,14 @@ import os
 import environ
 
 
+ROOT_DIR = environ.Path(__file__) - 3
+
 env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False)
 )
 # reading .env file
-environ.Env.read_env()
+environ.Env.read_env(str(ROOT_DIR.path('.env')))
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -126,12 +128,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # CELERY settings
-BROKER_URL = env('BROKER_URL'),
-CELERY_RESULT_BACKEND = env('CELERY_RESULT_BACKEND'),
+BROKER_URL = env("BROKER_URL", default='redis://localhost:6379'),
+CELERY_RESULT_BACKEND = env("CELERY_RESULT_BACKEND",
+                            default='redis://localhost:6379'),
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Europe/London'
+
 
 # EMAIL SETTINGS
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
