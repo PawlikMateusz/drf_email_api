@@ -32,12 +32,12 @@ To install and run this project you must have to install Redis message broker an
 ```
 # Django conf
 SECRET_KEY=
+DEBUG=on
 
 # PostgreSQL conf
 POSTGRES_NAME=
 POSTGRES_HOST=
 POSTGRES_PORT=
-POSTGRES_DB=
 POSTGRES_USER=
 POSTGRES_PASSWORD=
 
