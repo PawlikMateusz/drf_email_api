@@ -47,7 +47,7 @@ class Email(models.Model):
     to = ArrayField(models.EmailField(), blank=False)
     cc = ArrayField(models.EmailField(), blank=True, null=True)
     bcc = ArrayField(models.EmailField(), blank=True, null=True)
-    reply_to = models.EmailField(blank=True, null=True)
+    reply_to = ArrayField(models.EmailField(), blank=True, null=True)
     send_date = models.DateTimeField(null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
 
