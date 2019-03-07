@@ -25,11 +25,13 @@ def create_message(data, email):
                                 password=mailbox.password,
                                 use_tls=mailbox.use_ssl)
     message = EmailMessage(
-        template.subject,
-        template.text,
-        mailbox.email_from,
-        data['to'],
-        email.reply_to,
+        subject=template.subject,
+        body=template.text,
+        from_email=mailbox.email_from,
+        to=data['to'],
+        cc=email.cc,
+        bcc=email.bcc,
+        reply_to=email.reply_to,
         headers={'Message-ID': 'Custom email id'},
         connection=connection
     )
